@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff; */
+  --background: #0f010c;
+  /* --foreground: #171717; */
+  --foreground: #f5f5f5;
+  font: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,8 +19,73 @@
   }
 }
 
+.amboss-border {
+  border: solid 1px rgba(255, 255, 255, 0.17);
+}
+
+.amboss-border-bottom {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.17);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.table-wrapper {
+  @apply amboss-border;
+  overflow-x: auto;
+  border-radius: 15px;
+}
+
+table {
+  @apply amboss-border;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-weight: 300;
+}
+
+table > * {
+  font-weight: 300;
+}
+
+tr {
+  @apply amboss-border-bottom;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+  font-weight: 300;
+}
+
+td {
+  padding: 10px;
+  font-weight: 300;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+.font-secondary {
+  color: #A3A3A3;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.tr-bg:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.link {
+  color: #9ca3af;
+}
+
+.link:hover {
+  color: #fff;
 }
