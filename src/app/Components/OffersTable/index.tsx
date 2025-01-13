@@ -85,23 +85,23 @@ const OffersTable = () => {
                         <tr className='tr-bg' key={offer.id}>
                             <td className='flex items-center w-90'>
                                 <div className='flex items-center ml-5'>
-                                    <Image src="/pfp1.png" alt="pfp" width={40} height={40} className="rounded-full" />
+                                    <Image src="/pfp1.png" alt="pfp" width={40} height={40} className="" />
                                 </div>
                                 <div className='m-2 w-60'>
-                                    <div>{offer?.name || "⚡ G-Spot-21_69..."}</div>
-                                    <div className='flex my-1'>
-                                    {offer.tags?.map((tag:any) => {
-                                        if (tag.name === 'Node Runner') {
-                                            return <span key={offer.i + "_node"} className='text-lime-400 bold border-4 border-lime-400 rounded-lg px-2 mx-1'>{tag.name}</span>
-                                        } else if (tag.name === 'Fast') {
-                                            return <span key={offer.id + "_fast"} className='text-blue-400 bold border-4 border-blue-400 rounded-lg px-2 mx-1'>{tag.name}</span>
-                                        } else if (tag.name === 'Fastest') {
-                                            return <span key={offer.id + "_fastest"} className='text-fuchsia-400 bold border-4 border-fuchsia-400 rounded-lg px-2 mx-1'>{tag.name}</span>
-                                        } else {
-                                            return <span key={offer.id + "_operator"} className='text-yellow-400 bold border-4 border-yellow-400 rounded-lg px-2 mx-1'>{tag.name}</span>
-                                        }
-                                    })}
-                                    </div>
+                                    <div>{offer?.name || "⚡ G-Sot-21_69..."}</div>
+                                    {offer.tags.length ? <div className='flex my-1'>
+                                        {offer.tags?.map((tag:any) => {
+                                            if (tag.name === 'Node Runner') {
+                                                return <span key={offer.i + "_node"} className='text-lime-400 bold border-4 border-lime-400 rounded-lg px-2 mx-1'>{tag.name}</span>
+                                            } else if (tag.name === 'Fast') {
+                                                return <span key={offer.id + "_fast"} className='text-blue-400 bold border-4 border-blue-400 rounded-lg px-2 mx-1'>{tag.name}</span>
+                                            } else if (tag.name === 'Fastest') {
+                                                return <span key={offer.id + "_fastest"} className='text-fuchsia-400 bold border-4 border-fuchsia-400 rounded-lg px-2 mx-1'>{tag.name}</span>
+                                            } else {
+                                                return <span key={offer.id + "_operator"} className='text-yellow-400 bold border-4 border-yellow-400 rounded-lg px-2 mx-1'>{tag.name}</span>
+                                            }
+                                        })}
+                                    </div> : null}
                                 <div>1099 ch / 39.23 BTC cap</div>
                             </div>
                             </td>

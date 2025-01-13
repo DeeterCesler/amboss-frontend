@@ -84,6 +84,7 @@ td {
 body {
   color: var(--foreground);
   font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
   background: black;
 }
 
