@@ -106,8 +106,8 @@ const OffersTable = () => {
                             </div>
                             </td>
                             <td>{offer?.seller_score}<span className='font-secondary'>/100</span></td>
-                            <td>{offer?.base_fee.toFixed()}</td>
-                            <td>{offer?.fee_rate_cap.toFixed()}</td>
+                            <td>{offer?.base_fee.toFixed() || '100'}</td>
+                            <td>{offer?.fee_rate_cap.toFixed() || '500'}</td>
                             {/* Mocked # days */}
                             <td>~90d</td> 
                             <td>{offer?.var_ppm || '14,900'}</td>
@@ -116,12 +116,12 @@ const OffersTable = () => {
                             <td>{satsToBtc(offer?.min_block_length)}</td>
                             <td>{satsToBtc(offer?.max_size)}</td>
                             <td>
-                                <div>{satsToBtc(offer?.available_liquidity).toFixed(3)} BTC</div>
+                                <div>{satsToBtc(offer?.available_liquidity,3)} BTC</div>
                                 <div className='font-secondary slightly-smaller'>Total: 4.158 BTC</div>
                             </td>
-                            <td className='font-secondary slightly-smaller'>
+                            <td className='font-secondary slightly-smaller w-36'>
                                 <div>100 orders</div>
-                                <div>{satsToBtc(offer?.orders?.locked_size) || '6.305 BTC Capacity'}</div>
+                                <div>{satsToBtc(offer?.orders?.locked_size) || '6.305'} BTC Capacity</div>
                             </td>
                         </tr>
                         ))}
