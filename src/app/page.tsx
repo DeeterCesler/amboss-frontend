@@ -1,4 +1,4 @@
-import OffersTable from "./table";
+import OffersTable from "./Components/OffersTable";
 
 export default function Home() {
   return (

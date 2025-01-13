@@ -17,6 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ApolloWrapper>
+          <div className="background">
+          </div>
           <NavBar />
           {children}
         </ApolloWrapper>
