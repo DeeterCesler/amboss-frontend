@@ -33,10 +33,10 @@ const OffersTable = () => {
                     <h1 className='text-4xl font-bold'>Explore Offers ({offers.length})</h1>
                 </div>
                 <div className='flex float-right'>
-                    <button className='w-[200] p-2 bg-black mx-5 text-white rounded-md bold amboss-border'>
+                    <button className='w-40 p-2 bg-black mx-5 text-white rounded-md bold amboss-border'>
                         <a href="/sell">Sell Channels</a>
                     </button>
-                    <button className="w-[200] p-2 bg-white text-black rounded-md bold amboss-border">
+                    <button className="w-40 p-2 bg-white text-black rounded-md bold amboss-border">
                         <a href="/sell">Buy Channels</a>
                     </button>
                 </div>
