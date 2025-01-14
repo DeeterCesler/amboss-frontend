@@ -1,12 +1,13 @@
 'use client';
 
-import { ApolloClient, ApolloProvider, InMemoryCache, useQuery } from '@apollo/client';
+import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache, useQuery } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://api.amboss.space/graphql',
+  uri: '/api/graphql-proxy',
   cache: new InMemoryCache(),
   credentials: 'include',
 });
+
 
 export function ApolloWrapper({ children }: { children: React.ReactNode }) {
   return (
