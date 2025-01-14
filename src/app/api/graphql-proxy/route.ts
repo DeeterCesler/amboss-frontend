@@ -1,4 +1,3 @@
-// app/api/graphql-proxy/route.ts
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
@@ -19,7 +18,6 @@ export async function POST(request: Request) {
   return NextResponse.json(data);
 }
 
-// Apollo sometimes sends preflight OPTIONS requests
 export async function OPTIONS(request: Request) {
   return new NextResponse(null, {
     status: 200,
@@ -31,7 +29,6 @@ export async function OPTIONS(request: Request) {
   });
 }
 
-// Also handle GET requests
 export async function GET(request: Request) {
   return NextResponse.json({ message: "GraphQL endpoint ready" });
 }

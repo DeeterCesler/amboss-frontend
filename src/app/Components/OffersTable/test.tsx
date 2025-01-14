@@ -4,7 +4,6 @@ import { MockedProvider } from '@apollo/client/testing'
 import OffersTable, { satsToBtc } from './index'
 import { GET_CHANNELS } from '@/apollo/query'
 
-// Mock next/image
 jest.mock('next/image', () => ({
   __esModule: true,
   default: (props: any) => {
